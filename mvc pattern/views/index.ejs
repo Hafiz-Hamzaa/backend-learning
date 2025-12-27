@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Registered Homes</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
     <div class="container">
-        <h1>All Registered Homes</h1>
-        <a href="/add" class="btn">Add Home</a>
+      <h1>All Registered Homes</h1>
+      <a href="/add" class="btn">Add Home</a>
 
-        <div class="homes">
-            <% if(homes.length === 0) { %>
-                <p>No homes registered yet.</p>
-            <% } %>
-            <% homes.forEach(home => { %>
-                <div class="card">
-                    <img src="<%= home.image %>" alt="<%= home.name %>" class="card-img">
-                    <h2><%= home.name %></h2>
-                    <p>Address: <%= home.address %></p>
-                    <p>Price: <%= home.price %></p>
-                </div>
-            <% }) %>
+      <div class="homes">
+        <% if(homes.length === 0) { %>
+        <p>No homes registered yet.</p>
+        <% } %> <% homes.forEach(home => { %>
+        <div class="card">
+          <img
+            src="<%= home.image %>"
+            alt="<%= home.name %>"
+            class="card-img"
+          />
+          <h2><%= home.name %></h2>
+          <p>Address: <%= home.address %></p>
+          <p>Price: <%= home.price %></p>
+          <a href="/home/<%= home.id %>" class="btn"> View Details </a>
         </div>
+        <% }) %>
+      </div>
     </div>
-</body>
+  </body>
 </html>

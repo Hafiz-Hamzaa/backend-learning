@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home Details</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img src="<%= home.image %>" class="card-img" />
+
+      <h1><%= home.name %></h1>
+      <p><strong>Address:</strong> <%= home.address %></p>
+      <p><strong>Price:</strong> <%= home.price %></p>
+      <a href="/home/<%= home.id %>/edit">Edit Home</a>
+      <form action="/home/<%= home.id %>/delete" method="POST">
+        <button type="submit">Delete Home</button>
+      </form>
+
+      <a href="/">← Back to Home</a>
+    </div>
+  </body>
+</html>

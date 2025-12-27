@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit Home</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+
+    <div class="container">
+    <h1>Edit Home</h1>
+
+    <form  action="/home/<%= home.id %>/edit" method="POST">
+      <input type="text" name="name" value="<%= home.name %>" />
+      <input type="text" name="address" value="<%= home.address %>" />
+      <input type="text" name="price" value="<%= home.price %>" />
+      <input type="text" name="image" value="<%= home.image %>" />
+
+      <button>Update Home</button>
+    </form>
+
+    <div class="back-link">
+    <a href="/">← Back to Home</a>
+</div>
+</div>
+
+  </body>
+</html>

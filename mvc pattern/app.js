@@ -9,12 +9,10 @@
 
 
 // Dynamic Path and Model Deepdive
-// Topics
-// What are Dynamic Paths
+// 🔹 Dynamic Path kya hota hai : Dynamic path = URL ka wo hissa jo change hota hai || “Ek hi route se multiple cheezon ka data show karna” || Jab ek hi page ko different data ke sath reuse karna ho → Dynamic Path use hota hai
+
 // Adding Home Details Page
 // Showing Real Home Data
-// Adding Favourite Feature
-// Adding Favourite Model
 // Edit-Home: Adding Feature Skeleton
 // Edit-Home:Showing Existing Data
 // Edit-Home:Handling Edit Request
