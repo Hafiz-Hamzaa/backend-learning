@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Book</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="container form-container">
+    <h1>✏️ Edit Book</h1>
+
+    <form action="/edit/<%= book.id %>" method="POST" class="book-form">
+        <input type="text" name="title" value="<%= book.title %>" required>
+        <input type="text" name="author" value="<%= book.author %>" required>
+        <input type="text" name="genre" value="<%= book.genre %>" required>
+        <input type="number" name="price" value="<%= book.price %>" required>
+
+        <button type="submit" class="btn primary full">Update Book</button>
+    </form>
+
+    <a href="/" class="back-link">← Back to Library</a>
+</div>
+
+</body>
+</html>
