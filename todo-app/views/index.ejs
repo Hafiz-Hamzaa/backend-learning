@@ -1,0 +1,22 @@
+<%- include("partials/header") %>
+
+<h2>My Todos</h2>
+<div class="todo-list">
+  <% if(todos.length === 0) { %>
+    <p class="empty-msg">No todos yet. <a href="/add">Add one</a>!</p>
+  <% } else { %>
+    <% todos.forEach(todo => { %>
+      <div class="todo-card <%= todo.status === 'Completed' ? 'completed' : '' %>">
+        <h3><%= todo.title %></h3>
+        <p><%= todo.description %></p>
+        <p class="status">Status: <%= todo.status %></p>
+        <div class="actions">
+          <a href="/edit/<%= todo._id %>" class="btn edit">Edit</a>
+          <a href="/delete/<%= todo._id %>" class="btn delete" onclick="return confirm('Are you sure?')">Delete</a>
+        </div>
+      </div>
+    <% }) %>
+  <% } %>
+</div>
+
+<%- include("partials/footer") %>

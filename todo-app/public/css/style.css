@@ -1,0 +1,214 @@
+/* General reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #1E1B2E; /* dark purple background */
+  color: #E0E0E0;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0.65rem auto;
+}
+
+/* Navbar */
+.navbar {
+  background: #3B2F5C;
+  color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  border-bottom: 2px solid #6C5DD3;
+  display: flex;
+  align-items: center;
+}
+.navbar h1 {
+  display: inline-block;
+  margin-left: 1rem;
+  font-weight: 700;
+}
+.nav-links {
+  list-style: none;
+  float: right;
+  margin-right: 1rem;
+}
+.nav-links li {
+  display: inline-block;
+  margin-left: 1rem;
+}
+.nav-links a {
+  color: #D9D9FF;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  color: #fff;
+  text-shadow: 0 0 5px #6C5DD3;
+}
+
+/* Todo Cards */
+.todo-list {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.todo-card {
+  background: #2A2545;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-left: 5px solid #6C5DD3;
+}
+.todo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+}
+.todo-card.completed {
+  border-left: 5px solid #00FFAA;
+  opacity: 0.9;
+}
+.todo-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: #F0F0FF;
+}
+.todo-card p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #D9D9FF;
+}
+.todo-card .status {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: #FFDD59;
+}
+.todo-card .actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.btn.edit {
+  background: #6C5DD3;
+  color: #fff;
+  border: 1px solid #6C5DD3;
+}
+.btn.edit:hover {
+  background: #5141a6;
+  box-shadow: 0 0 10px #6C5DD3;
+}
+.btn.delete {
+  background: #FF4C4C;
+  color: #fff;
+  border: 1px solid #FF4C4C;
+}
+.btn.delete:hover {
+  background: #cc3b3b;
+  box-shadow: 0 0 10px #FF4C4C;
+}
+.btn.submit {
+  background: #6C5DD3;
+  color: #fff;
+  border: none;
+  width: 100%;
+  padding: 0.7rem;
+  font-size: 1rem;
+}
+.btn.submit:hover {
+  background: #5141a6;
+  box-shadow: 0 0 15px #6C5DD3;
+}
+
+/* Form Card */
+.form-card {
+  background: #2A2545;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+  margin-top: 2rem;
+}
+.form-card label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: #F0F0FF;
+}
+
+.form-card input, 
+.form-card textarea, 
+.form-card select {
+  width: 100%;
+  padding: 0.8rem 1rem;       /* thoda padding increase for better feel */
+  margin-bottom: 1.2rem;
+  border-radius: 10px;        /* rounded corners enhanced */
+  border: 1px solid #fff;
+  background: #1E1B2E;
+  color: #E0E0E0;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 8px rgba(108, 93, 211, 0.5); /* subtle default shadow */
+}
+
+/* Focus effect: glowing and slightly lift */
+.form-card input:focus,
+.form-card textarea:focus,
+.form-card select:focus {
+  border-color: #6C5DD3;
+  box-shadow: 0 0 15px 3px rgba(108, 93, 211, 0.7);
+  outline: none;
+  transform: translateY(-2px); /* subtle lift */
+}
+
+/* Hover effect for textarea/select/input */
+.form-card input:hover,
+.form-card textarea:hover,
+.form-card select:hover {
+  box-shadow: 0 0 12px 2px rgba(108, 93, 211, 0.6);
+  border-color: #8E7DF5;
+}
+
+/* Empty message */
+.empty-msg {
+  color: #FFDD59;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 2rem;
+}
+.empty-msg a {
+  color: #6C5DD3;
+  text-decoration: underline;
+}
+.empty-msg a:hover {
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  color: #aaa;
+  font-size: 0.9rem;
+}
